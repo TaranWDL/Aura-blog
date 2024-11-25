@@ -1,0 +1,70 @@
+<%- include("partials/header.ejs") %>
+<div id="index-container">
+<h1 id="open-title">Welcome to Aura.</h1>
+
+<a href="/create"><button>Create blog</button></a>
+
+
+<% if (locals.blogs) { %>
+    <% if (blogs.length > 3) { %>
+        <h2>Recent Posts</h2>
+        <% } %>
+        <% } %>
+
+
+<div id="recents"> 
+
+    <% if (locals.blogs) { %>
+        <% if (blogs.length > 3) { %>
+            <div class="recent">
+                <div>
+                <h3><%= blogs[blogs.length - 1].title %></h3>
+                </div>
+                <a href="/posts/<%= blogs[blogs.length - 1].id %>"><button>Visit<img src="icons/box-arrow-up-right.svg"></button></a>
+            </div>
+            <% } %>
+            <% if (blogs.length > 4) { %>
+                <hr>
+                <div class="recent">
+                    <div>
+                    <h3><%= blogs[blogs.length - 2].title %></h3>
+                    </div>
+                    <a href="/posts/<%= blogs[blogs.length - 2].id %>"><button>Visit<img src="icons/box-arrow-up-right.svg"></button></a>
+                </div>
+                <% } %>
+                <% if (blogs.length > 5) { %>
+                    <hr>
+                    <div class="recent">
+                        <div>
+                        <h3><%= blogs[blogs.length - 3].title %></h3>
+                        </div>
+                        <a href="/posts/<%= blogs[blogs.length - 3].id %>"><button>Visit<img src="icons/box-arrow-up-right.svg"></button></a>
+                    </div>
+                    <% } %>
+        <% } %>
+
+
+</div>
+
+
+<% if (locals.blogs) { %>
+    <% if (blogs.length > 3) { %>
+        <h2>All Posts</h2>
+        <% } %>
+        <% } %>
+<% if (locals.blogs) { %>
+    <% if (blogs.length != 0) { %>
+        <% blogs.forEach(function(blog) { %>
+            <a href="/posts/<%= blog.id %>"><div class="blogs">
+                <h3><%= blog.title %></h3>
+                <div>
+                <p><%= blog.date %></p>
+                <p><%= blog.time %></p>
+                </div>
+            </div></a>
+            
+            <% }); %>
+            <% }; %>
+<% }; %>
+</div>
+<%- include("partials/footer.ejs") %>

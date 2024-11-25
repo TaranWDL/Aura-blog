@@ -1,0 +1,160 @@
+body {
+    background-color: aliceblue;
+    color: black;
+    font-family: "Host Grotesk", sans-serif;
+    overflow: scroll;
+}
+
+#open-title {
+    font-size: 60px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+
+#index-container {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+button {
+    font-family: "Host Grotesk", sans-serif;
+    border: 0;
+    background-color: black;
+    color: aliceblue;
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 4rem;
+    width: fit-content;
+}
+
+input, textarea {
+    border-radius: 2rem;
+    font-family: "Host Grotesk", sans-serif;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 15px;
+    resize: none;
+}
+
+#creation-container {
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+    justify-content: center;
+    gap: 2rem;
+    width: 40%;
+
+}
+
+#body-input {
+    height: 20rem;
+    text-align: start;
+}
+
+#recents {
+    display: flex;
+    gap: 2rem;
+}
+
+.recent {
+    height: 6rem;
+    width: fit-content;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 
+                0px -4px 6px rgba(0, 0, 0, 0.1),
+                4px 0px 6px rgba(0, 0, 0, 0.1),
+                -4px 0px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.recent button {
+    background-color: aliceblue;
+    border: 1px black solid;
+    color: black;
+    padding: 5px 8px;
+    font-size: 20px;
+    display: flex;
+    gap: .5rem;
+    flex-direction: row;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.recent a {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    text-decoration: none;
+}
+
+.recent h3 {
+    margin: 0;
+    padding: 0px;
+    font-size: 20px;
+    
+}
+
+.recent div {
+    width: 14rem;
+    word-wrap: break-word;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    height: 100%;
+}
+
+hr {
+    background-color: rgb(214, 214, 214);
+    width: 2px;
+    border: none;
+}
+
+.blogs {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 
+                0px -4px 6px rgba(0, 0, 0, 0.1),
+                4px 0px 6px rgba(0, 0, 0, 0.1),
+                -4px 0px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 0px 15px;
+    width: 45vw;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: fit-content;
+    transition: transform .2s;
+    color: black;
+}
+
+.blogs:hover {
+    transition: transform .2s;
+    transform: scale(1.05);
+}
+
+.blogs h3 {
+    font-weight: 400;
+    font-size: 22px;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Create a blog</h1>
+
+
+
+<form action="/submit" method="POST">
+    <div id="creation-container">
+    <input placeholder="Title" name="title" id="title-input" maxlength="54"></input>
+    <textarea placeholder="Content" name="body" id="body-input"></textarea>
+    <button type="submit">Create</button>
+    </div>
+</form>
+
+
+<%- include("partials/footer.ejs") %>
